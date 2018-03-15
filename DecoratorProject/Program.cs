@@ -10,6 +10,11 @@ namespace DecoratorProject
     {
         static void Main(string[] args)
         {
+            TextField txt = new TextField(20,20);
+            BorderDecorator bord = new BorderDecorator(txt);
+            ScrollDecorator scroll = new ScrollDecorator(bord);
+            scroll.Draw();
+            Console.ReadKey();
         }
     }
 }
